@@ -1,0 +1,85 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Practice";
+}
+
+<div class="practice-app" id="practice-app">
+    <section class="controls">
+        <div class="control-row">
+            <div class="control-group">
+                <span class="control-label">collection</span>
+                <select id="collection-select" class="control-select" aria-label="Verse collection"></select>
+            </div>
+            <div class="control-group">
+                <span class="control-label">verse</span>
+                <select id="verse-select" class="control-select" aria-label="Bible verse"></select>
+            </div>
+        </div>
+
+        <div class="control-row">
+            <div class="stage-tabs" role="tablist" aria-label="Memorization stage">
+                <button type="button" class="stage-tab active" data-stage="type-it" role="tab" aria-selected="true">type it</button>
+                <button type="button" class="stage-tab" data-stage="memorize-it" role="tab" aria-selected="false">memorize it</button>
+                <button type="button" class="stage-tab" data-stage="master-it" role="tab" aria-selected="false">master it</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar" aria-live="polite">
+        <div class="stat">
+            <span class="stat-value" id="stat-wpm">0</span>
+            <span class="stat-label">wpm</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value" id="stat-accuracy">100</span>
+            <span class="stat-label">acc</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value" id="stat-time">0</span>
+            <span class="stat-label">time</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value" id="stat-progress">0/0</span>
+            <span class="stat-label">words</span>
+        </div>
+    </section>
+
+    <section class="verse-panel">
+        <p class="verse-reference" id="verse-reference">Loading...</p>
+        <p class="stage-hint" id="stage-hint">Type the full verse from the reference shown above.</p>
+    </section>
+
+    <section class="typing-area" id="typing-area" tabindex="0" aria-label="Typing area. Click here or press Tab to focus.">
+        <div class="words" id="words-display"></div>
+        <input type="text" id="typing-input" class="typing-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-hidden="true" />
+    </section>
+
+    <section class="action-bar">
+        <button type="button" class="btn btn-ghost" id="btn-reset">reset</button>
+        <button type="button" class="btn btn-primary" id="btn-restart">restart</button>
+    </section>
+
+    <div class="completion-overlay hidden" id="completion-overlay">
+        <div class="completion-card">
+            <h2>verse complete</h2>
+            <p class="completion-reference" id="completion-reference"></p>
+            <div class="completion-stats">
+                <div><span id="completion-wpm">0</span> wpm</div>
+                <div><span id="completion-accuracy">100</span>% accuracy</div>
+            </div>
+            <p class="completion-stage" id="completion-stage"></p>
+            <div class="completion-actions">
+                <button type="button" class="btn btn-ghost" id="btn-practice-again">practice again</button>
+                <button type="button" class="btn btn-primary hidden" id="btn-next-stage">next stage</button>
+                <button type="button" class="btn btn-primary hidden" id="btn-next-verse">next verse</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => RecallApp.initPractice());
+    </script>
+}

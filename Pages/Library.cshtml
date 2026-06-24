@@ -1,0 +1,26 @@
+@page
+@model LibraryModel
+@{
+    ViewData["Title"] = "Library";
+}
+
+<div class="library-app" id="library-app">
+    <header class="library-header">
+        <h1>verse library</h1>
+        <p class="library-subtitle">Browse collections and track your memorization progress.</p>
+    </header>
+
+    <div class="library-filters">
+        <select id="library-collection" class="control-select" aria-label="Filter by collection">
+            <option value="">All collections</option>
+        </select>
+    </div>
+
+    <div class="library-grid" id="library-grid"></div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => RecallApp.initLibrary());
+    </script>
+}

@@ -1,0 +1,84 @@
+{
+  "collections": [
+    {
+      "id": "salvation",
+      "name": "Salvation",
+      "description": "Core verses on grace, faith, and eternal life"
+    },
+    {
+      "id": "comfort",
+      "name": "Comfort & Peace",
+      "description": "Scripture for anxiety, fear, and rest"
+    },
+    {
+      "id": "strength",
+      "name": "Strength",
+      "description": "Verses for perseverance and courage"
+    }
+  ],
+  "verses": [
+    {
+      "id": "john-3-16",
+      "reference": "John 3:16",
+      "text": "For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.",
+      "collectionId": "salvation",
+      "order": 1
+    },
+    {
+      "id": "romans-3-23",
+      "reference": "Romans 3:23",
+      "text": "For all have sinned and fall short of the glory of God.",
+      "collectionId": "salvation",
+      "order": 2
+    },
+    {
+      "id": "ephesians-2-8-9",
+      "reference": "Ephesians 2:8-9",
+      "text": "For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast.",
+      "collectionId": "salvation",
+      "order": 3
+    },
+    {
+      "id": "philippians-4-6-7",
+      "reference": "Philippians 4:6-7",
+      "text": "Do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God. And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
+      "collectionId": "comfort",
+      "order": 1
+    },
+    {
+      "id": "isaiah-41-10",
+      "reference": "Isaiah 41:10",
+      "text": "Fear not, for I am with you; be not dismayed, for I am your God; I will strengthen you, I will help you, I will uphold you with my righteous right hand.",
+      "collectionId": "comfort",
+      "order": 2
+    },
+    {
+      "id": "psalm-23-1",
+      "reference": "Psalm 23:1",
+      "text": "The Lord is my shepherd; I shall not want.",
+      "collectionId": "comfort",
+      "order": 3
+    },
+    {
+      "id": "philippians-4-13",
+      "reference": "Philippians 4:13",
+      "text": "I can do all things through him who strengthens me.",
+      "collectionId": "strength",
+      "order": 1
+    },
+    {
+      "id": "joshua-1-9",
+      "reference": "Joshua 1:9",
+      "text": "Have I not commanded you? Be strong and courageous. Do not be frightened, and do not be dismayed, for the Lord your God is with you wherever you go.",
+      "collectionId": "strength",
+      "order": 2
+    },
+    {
+      "id": "isaiah-40-31",
+      "reference": "Isaiah 40:31",
+      "text": "But they who wait for the Lord shall renew their strength; they shall mount up with wings like eagles; they shall run and not be weary; they shall walk and not faint.",
+      "collectionId": "strength",
+      "order": 3
+    }
+  ]
+}
